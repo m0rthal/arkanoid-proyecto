@@ -1,0 +1,7 @@
+sceneSetups:
+- path: Assets/Levels/escena.unity
+  isLoaded: 1
+  isActive: 1
+- path: Assets/Levels/escena2.unity
+  isLoaded: 0
+  isActive: 0
