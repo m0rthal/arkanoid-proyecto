@@ -6,29 +6,69 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-        public GUIText scoreText;
+        //public GUIText scoreText;
         public GUIText vidasText;
         public int score;
         public int vidas = 3;
         bool nivel2 = false;
+        bool nivel3 = false;
+        bool nivel4 = false;
+        bool boss = false;
         void Start()
         {
+                if (score == 1950)
+                {
+                        nivel2 = true;
+                }
+
+                if (score == 3600)
+                {
+                        nivel3 = true;
+                }
+                if (score == 4730)
+                {
+                        nivel4 = true;
+                }
+
+                if (score == 5730)
+                {
+                        boss = true;
+                }
                 updateScore();
                 updateVidas();
+                
         }
 
         void Update()
         {
-
                 if (score == 1950 && !nivel2)
                 {
-                        Resources.UnloadUnusedAssets();
                         SceneManager.LoadScene("escena2");
                 }
 
-                if(vidas == 0)
+                if (score == 3600 && !nivel3)
                 {
-                        SceneManager.LoadScene("escena");
+                        SceneManager.LoadScene("escena3");
+                }
+
+                if (score == 4730 && !nivel4)
+                {
+                        SceneManager.LoadScene("escena4");
+                }
+
+                if (score == 5730 && !boss)
+                {
+                        SceneManager.LoadScene("boss");
+                }
+
+                if (score == 6030)
+                {
+                        SceneManager.LoadScene("Win");
+                }
+
+                if (vidas == 0)
+                {
+                        SceneManager.LoadScene("gameover");
                 }
         }
 
@@ -46,7 +86,7 @@ public class GameController : MonoBehaviour {
 
 	void updateScore ()
         {
-                scoreText.text = "Score: " + score;
+                //scoreText.text = "Score: " + score;
         }
 
         void updateVidas()

@@ -79,6 +79,10 @@
     <Compile Include="Assets\Scripts\Bola.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\bloque.cs" />
+    <Compile Include="Assets\Scripts\boss.cs" />
+    <Compile Include="Assets\Scripts\boton.cs" />
+    <Compile Include="Assets\Scripts\botonseleccion.cs" />
+    <Compile Include="Assets\Scripts\gameover.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

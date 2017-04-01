@@ -20,9 +20,9 @@ public class bloque : MonoBehaviour
                 }
         } 
 
-        void OnCollisionEnter2D(Collision2D collision)
+        void OnCollisionEnter2D(Collision2D col)
         {
-                gameController.addScore(score);
-                Destroy(gameObject);
+                        gameController.addScore(score);
+                        Destroy(gameObject);
         }
 }
